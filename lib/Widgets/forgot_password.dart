@@ -1,0 +1,33 @@
+import 'package:flutter/material.dart';
+
+
+class ForgotPasswordPage extends StatelessWidget {
+  const ForgotPasswordPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Center(child:  Text('Forgot Password')),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const TextField(
+              decoration: InputDecoration(
+                labelText: 'Email',
+              ),
+            ),
+            const SizedBox(height: 16.0,),
+            ElevatedButton(onPressed: () {
+                print("reset pressed");
+              },
+               child: const Text('Reset Password')),
+          ],
+        ), 
+        ),
+    );
+  }
+}
